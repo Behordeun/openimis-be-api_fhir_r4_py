@@ -43,7 +43,7 @@ class PatientConverter(BaseFHIRConverter, PersonConverterMixin, ReferenceConvert
         fhir_json = fhir_patient.json()
         fhir_json_parsed = json.loads(fhir_json)
         id = fhir_json_parsed["id"]
-        url= "https://04895d76-4524-4327-99d6-15ddf622c87f:e7dd814a7494bce284a7a45f6777bec3b31a8c0c3fa8eea9a598dff65f651173@c6ed-102-88-63-80.ngrok-free.app/fhir/R4/Patient/{}".format(id)
+        url= "https://568c7573-ab69-47ab-98cf-39b92ff56892:6a0115ecbcfa39781879e616e013fea605e17ec8e73f8e2553b01edcc0720b18@e7ff-105-113-19-142.ngrok-free.app/fhir/R4/Patient/{}".format(id)
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, headers=headers, data=fhir_json)
         return fhir_patient
